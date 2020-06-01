@@ -21,8 +21,6 @@ int main()
     }
 
     auto it = scores.begin();
-    while(it->first != 1 && it != scores.end()) it++;
-    cout << names[it->second.second];
-    return 0;
-    cout << (it == scores.end() ? "all disqualified" : (string) names[it->second.second]);
+    while(it->second.first != 1 && it != scores.end()) it++;
+    cout << (it == scores.end() ? "all disqualified" : names[it->second.second]);
 }
